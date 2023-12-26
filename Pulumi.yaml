@@ -1,0 +1,19 @@
+name: Allen_Challenge
+runtime: go
+description: A minimal AWS Go Pulumi program
+
+template:
+  description: A Go program to deploy a static website on AWS
+  config:
+    aws:region:
+      description: The AWS region to deploy into
+      default: us-east-1
+    path:
+      description: The path to the folder containing the website
+      default: ./www
+    indexDocument:
+      description: The file to use for top-level pages
+      default: index.html
+    errorDocument:
+      description: The file to use for error pages
+      default: error.html
